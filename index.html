@@ -9,20 +9,15 @@
   <body>
     <header>
       <div class="logo">✈️ Borcelle Travel Agent</div>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Blog</a>
-      </nav>
-      <div class="right-section">
-        <input type="text" placeholder="Search..." />
-        <button class="login">👤 Log In</button>
-      </div>
     </header>
-
     <main>
       <section class="hero">
+        <!-- Gambar WhatsApp di bawah navbar -->
+        <div class="whatsapp-sticky">
+          <a href="https://wa.me/6281234567890" target="_blank">
+            <img src="assets/img/japan5.jpg" alt="WhatsApp" />
+          </a>
+        </div>
         <div class="text">
           <h1><span>Explore</span><br /><strong>THE WORLD</strong></h1>
           <p>
@@ -31,27 +26,33 @@
           </p>
           <button class="book">BOOK NOW →</button>
         </div>
-        <div class="cards">
-          <div class="card">
-            <img src="assets/img/paris2.jpg" alt="Paris" />
-            <h3>Travel in Paris</h3>
-            <p>Lorem ipsum praesent massa at ligula reet est iaculis.</p>
-            <button class="read-more">Read More →</button>
+        <div class="cards-wrapper">
+          <button class="nav-button left">&#10094;</button>
+          <div class="cards">
+            <div class="card">
+              <img src="assets/img/paris2.jpg" alt="Paris" />
+              <h3>Travel in Paris</h3>
+              <p>Lorem ipsum praesent massa at ligula reet est iaculis.</p>
+              <button class="read-more">Read More →</button>
+            </div>
+            <div class="card active">
+              <img src="assets/img/japan8.jpg" alt="Japan" />
+              <h3>Travel in Japan</h3>
+              <p>Vivamus est mist aliquet elit ac nisl.</p>
+              <button class="read-more">Read More →</button>
+            </div>
+            <div class="card">
+              <img src="assets/img/rome.jpg" alt="Rome" />
+              <h3>Travel in Roma</h3>
+              <p>Vivamus est mist aliquet elit ac nisl.</p>
+              <button class="read-more">Read More →</button>
+            </div>
           </div>
-          <div class="card active">
-            <img src="assets/img/japan8.jpg" alt="Japan" />
-            <h3>Travel in Japan</h3>
-            <p>Vivamus est mist aliquet elit ac nisl.</p>
-            <button class="read-more">Read More →</button>
-          </div>
-          <div class="card">
-            <img src="assets/img/rome.jpg" alt="Rome" />
-            <h3>Travel in Roma</h3>
-            <p>Vivamus est mist aliquet elit ac nisl.</p>
-            <button class="read-more">Read More →</button>
-          </div>
+          <button class="nav-button right">&#10095;</button>
         </div>
       </section>
     </main>
+    <!-- Dummy content to scroll -->
+    <div style="height: 2000px"></div>
   </body>
 </html>

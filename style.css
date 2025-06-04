@@ -24,32 +24,23 @@ header {
   font-size: 18px;
 }
 
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
+/* WhatsApp Sticky Button */
+.whatsapp-sticky {
+  position: sticky;
+  top: 70px; /* Jarak dari atas halaman */
+  z-index: 999;
+  margin-top: -40px;
+  margin-left: -20px;
 }
 
-.right-section {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.right-section input {
-  padding: 6px 12px;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-}
-
-.login {
-  background: none;
-  color: white;
-  border: none;
-  font-size: 16px;
+.whatsapp-sticky img {
+  height: 45px;
   cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.whatsapp-sticky img:hover {
+  transform: scale(1.1);
 }
 
 main {
@@ -102,6 +93,34 @@ main {
   background-color: #555;
 }
 
+.cards-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.nav-button.left {
+  left: -40px;
+}
+
+.nav-button.right {
+  right: -40px;
+}
 .cards {
   display: flex;
   gap: 20px;
