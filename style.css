@@ -32,7 +32,11 @@ header {
   margin-top: -40px;
   margin-left: -20px;
 }
-
+.whatsapp-sticky.fixed {
+  position: fixed;
+  margin-top: -40px;
+  margin-left: -20px;
+}
 .whatsapp-sticky img {
   height: 45px;
   cursor: pointer;
@@ -168,4 +172,44 @@ main {
   border-radius: 20px;
   font-size: 12px;
   cursor: pointer;
+}
+/* Laptop */
+@media screen and (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .hero {
+    width: 100%;
+    flex-direction: column;
+  }
+  .text p {
+    font-size: 20px;
+  }
+  .cards-wrapper {
+    top: 80px;
+    width: 100%;
+  }
+  .card {
+    width: 170px;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  .hero {
+    width: 100%;
+    flex-direction: column;
+  }
+  .text p {
+    font-size: 20px;
+  }
+  .cards-wrapper {
+    top: 80px;
+    width: 100%;
+  }
+  .card {
+    width: 130px;
+  }
 }
