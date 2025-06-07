@@ -103,8 +103,11 @@ main {
   align-items: center;
   justify-content: center;
 }
+.card {
+  position: relative;
+}
 
-.nav-button {
+.card.active .nav-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -115,16 +118,17 @@ main {
   cursor: pointer;
   padding: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 5;
+  z-index: 2;
 }
 
-.nav-button.left {
-  left: -40px;
+.card.active .nav-button.left {
+  left: 10px;
 }
 
-.nav-button.right {
-  right: -40px;
+.card.active .nav-button.right {
+  right: 10px;
 }
+
 .cards {
   display: flex;
   gap: 20px;
@@ -190,7 +194,7 @@ main {
     width: 100%;
   }
   .card {
-    width: 170px;
+    width: 190px;
   }
 }
 /* Tablet */
@@ -210,6 +214,6 @@ main {
     width: 100%;
   }
   .card {
-    width: 130px;
+    width: 150px;
   }
 }
