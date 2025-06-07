@@ -7,6 +7,8 @@
       mirror: false
     });
   }
+  window.addEventListener('load', aosInit);
+
 /**
    * Scroll top button
    */
@@ -27,9 +29,6 @@
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
-
-
-  window.addEventListener('load', aosInit);
 
 /* Preloader*/
   const preloader = document.querySelector('#preloader');
