@@ -1,4 +1,20 @@
-  /*** Animation on scroll function and init*/
+
+// 🔐 Nomor WA dalam base64
+  const encoded = "MDgxMjIwODY5NjAz"; // base64 
+  const phone = atob(encoded); // decode
+
+  $(function() {
+      $('#WAButton').floatingWhatsApp({
+        phone: phone, //WhatsApp Business phone number International format-
+        headerTitle: 'Chat with us on WhatsApp!', //Popup Title
+        popupMessage: 'Hello, how can we help you?', //Popup Message
+        showPopup: true, //Enables popup display
+        buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
+        position: "right", 
+        autoOpenTimeout:1,
+    });
+  });
+/*** Animation on scroll function and init*/
   function aosInit() {
     AOS.init({
       duration: 600,
@@ -37,20 +53,4 @@
       preloader.remove();
     });
   }
-
-// 🔐 Nomor WA dalam base64
-  const encoded = "MDgxMjIwODY5NjAz"; // base64 
-  const phone = atob(encoded); // decode
-
-  $(function() {
-      $('#WAButton').floatingWhatsApp({
-        phone: phone, //WhatsApp Business phone number International format-
-        headerTitle: 'Chat with us on WhatsApp!', //Popup Title
-        popupMessage: 'Hello, how can we help you?', //Popup Message
-        showPopup: true, //Enables popup display
-        buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
-        position: "right", 
-        autoOpenTimeout:1,
-    });
-  });
 /* Navbar tombol tombol */
