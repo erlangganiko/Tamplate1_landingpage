@@ -208,13 +208,18 @@ main {
     flex-direction: column;
   }
   .text p {
-    font-size: 20px;
+    font-size: 15px;
   }
   .cards-wrapper {
     top: 80px;
     width: 100%;
   }
+  .card.active {
+    display: block;
+    width: 300px;
+    z-index: 0;
+  }
   .card {
-    width: 150px;
+    display: none;
   }
 }
