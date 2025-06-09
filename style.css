@@ -103,6 +103,7 @@ main {
   position: relative;
   width: fit-content;
   margin: auto;
+  left: 40px;
 }
 
 .cards {
@@ -223,7 +224,8 @@ main {
   }
   .cards-wrapper {
     top: 80px;
-    width: 100%;
+    width: auto;
+    left: -10px;
   }
   .card.active {
     display: block;
@@ -232,8 +234,5 @@ main {
   }
   .card {
     display: none;
-  }
-  .cards-wrapper {
-    width: auto;
   }
 }
