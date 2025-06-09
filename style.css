@@ -101,34 +101,44 @@ main {
 
 .cards-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: fit-content;
+  margin: auto;
 }
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
 }
 
-.card.active .nav-button {
+.card.active {
+  display: flex;
+}
+
+.nav-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 24px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
   padding: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
 }
 
-.card.active .nav-button.left {
-  left: 10px;
+.nav-button.left {
+  left: -50px; /* Atur sesuai ukuran dan posisi */
 }
 
-.card.active .nav-button.right {
-  right: 10px;
+.nav-button.right {
+  right: -50px; /* Atur sesuai ukuran dan posisi */
 }
 
 .cards {
@@ -193,7 +203,7 @@ main {
   }
   .cards-wrapper {
     top: 80px;
-    width: 100%;
+    width: auto;
   }
   .card {
     width: 190px;
@@ -222,5 +232,8 @@ main {
   }
   .card {
     display: none;
+  }
+  .cards-wrapper {
+    width: auto;
   }
 }

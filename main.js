@@ -1,3 +1,31 @@
+/* Navbar tombol tombol */
+const cards = Array.from(document.querySelectorAll(".card"));
+
+function switchCard(direction) {
+  const currentIndex = cards.findIndex((card) =>
+    card.classList.contains("active")
+  );
+
+  let targetIndex;
+  if (direction === "left") {
+    targetIndex = (currentIndex - 1 + cards.length) % cards.length;
+  } else {
+    targetIndex = (currentIndex + 1) % cards.length;
+  }
+
+  cards[currentIndex].classList.remove("active");
+  cards[targetIndex].classList.add("active");
+}
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("nav-button")) {
+    if (e.target.classList.contains("left")) {
+      switchCard("left");
+    } else if (e.target.classList.contains("right")) {
+      switchCard("right");
+    }
+  }
+});
 // 🔐 Nomor WA dalam base64
 const encoded = "MDgxMjIwODY5NjAz"; // base64
 const phone = atob(encoded); // decode
@@ -47,12 +75,10 @@ scrollTop.addEventListener("click", (e) => {
 
 window.addEventListener("load", toggleScrollTop);
 document.addEventListener("scroll", toggleScrollTop);
-
-/* Preloader*/
+Preloader;
 const preloader = document.querySelector("#preloader");
 if (preloader) {
   window.addEventListener("load", () => {
     preloader.remove();
   });
 }
-/* Navbar tombol tombol */
