@@ -26,6 +26,18 @@ document.addEventListener("click", (e) => {
     }
   }
 });
+const cardsContainer = document.querySelector(".cards");
+
+document.getElementById("next").addEventListener("click", () => {
+  cardsContainer.appendChild(cardsContainer.firstElementChild); // geser ke kanan
+});
+
+document.getElementById("prev").addEventListener("click", () => {
+  cardsContainer.insertBefore(
+    cardsContainer.lastElementChild,
+    cardsContainer.firstElementChild
+  ); // geser ke kiri
+});
 // 🔐 Nomor WA dalam base64
 const encoded = "MDgxMjIwODY5NjAz"; // base64
 const phone = atob(encoded); // decode

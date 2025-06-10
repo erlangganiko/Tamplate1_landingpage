@@ -145,6 +145,7 @@ main {
 .cards {
   display: flex;
   gap: 20px;
+  transition: transform 0.5s ease; /* untuk animasi halus */
 }
 
 .card {
@@ -154,8 +155,7 @@ main {
   border-radius: 10px;
   width: 220px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transform: scale(0.95);
-  transition: 0.3s;
+  transition: transform 0.5s ease;
 }
 
 .card.active {
